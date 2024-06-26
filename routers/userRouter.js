@@ -25,6 +25,11 @@ router.get('/getall', (req, res) => {
     res.status(500).json(err);
    });
 });
+//: denotes url parameter
+router.get('/getbyemail/:email',(req,res)=>{
+    console.log(req.params.email);
+    res.send('response from user getbyemail');
+}) 
 
 // update
 router.get('/update', (req, res) => {
