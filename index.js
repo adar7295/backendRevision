@@ -2,6 +2,7 @@
 const express = require('express');
 const UserRouter = require('./routers/userRouter');
 const FeedRouter = require('./routers/feedRouter');
+const ProductRouter = require('./routers/productRouter');
 
 // initialize express
 const app = express();
@@ -13,6 +14,7 @@ app.use(express.json());
 
 app.use('/user', UserRouter);
 app.use('/feed', FeedRouter);
+app.use('/product',ProductRouter);
 
 // endpoint or route
 app.get('/', (req, res) => {
